@@ -56,8 +56,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@ryzenai.com',
-      link: 'mailto:hello@ryzenai.com',
+      value: 'hello@hubbleai.dev',
+      link: 'mailto:hello@hubbleai.dev',
     },
     {
       icon: Phone,

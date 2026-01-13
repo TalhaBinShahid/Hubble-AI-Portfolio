@@ -25,10 +25,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo & Description */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold gradient-text">RyzenAI</h3>
+            <h3 className="text-2xl font-bold gradient-text">Hubble AI</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional AI and product development company delivering intelligent, 
-              scalable solutions from small automations to enterprise applications.
+              Professional AI and product development company delivering intelligent,
+              scalable solutions, from small automations and machine learning workflows to full-stack,
+              enterprise-grade AI platforms.
             </p>
           </div>
 
@@ -75,7 +76,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-cyan-500/20 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} RyzenAI. All rights reserved. Powered by AI Innovation.
+            &copy; {currentYear} Hubble AI. All rights reserved. Powered by AI Innovation.
           </p>
         </div>
       </div>

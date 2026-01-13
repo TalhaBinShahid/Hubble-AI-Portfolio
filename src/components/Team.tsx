@@ -9,10 +9,10 @@ export default function Team() {
 
   const team = [
     {
-      name: 'Alex Chen',
-      role: 'CEO & AI Architect',
-      bio: 'Former AI researcher with 10+ years building scalable AI systems',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+      name: 'Umar Farooq',
+      role: 'Full Stack AI Engineer',
+      bio: 'AI and full-stack engineer focused on building production-ready intelligent systems and scalable platforms.',
+      image: '/umar.jpeg',
       social: {
         linkedin: '#',
         github: '#',
@@ -20,10 +20,10 @@ export default function Team() {
       },
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Head of Engineering',
-      bio: 'Full-stack expert specializing in cloud architecture and MLOps',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
+      name: 'Talha Bin Shahid',
+      role: 'AI Automations Engineer',
+      bio: 'Automation and agentic AI engineer building end-to-end workflows, integrations, and internal tools.',
+      image: '/talha.png',
       social: {
         linkedin: '#',
         github: '#',
@@ -31,21 +31,10 @@ export default function Team() {
       },
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Lead AI Engineer',
-      bio: 'NLP and Computer Vision specialist with production deployment expertise',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-      social: {
-        linkedin: '#',
-        github: '#',
-        twitter: '#',
-      },
-    },
-    {
-      name: 'Emily Taylor',
-      role: 'Product Designer',
-      bio: 'UX/UI designer crafting intuitive interfaces for complex AI systems',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
+      name: 'Mahnoor Sadaqat',
+      role: 'Full Stack Developer',
+      bio: 'Full-stack developer crafting modern, responsive interfaces for data-heavy and AI-powered products.',
+      image: '/mahnoor.png',
       social: {
         linkedin: '#',
         github: '#',
@@ -70,11 +59,11 @@ export default function Team() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Meet the experts behind RyzenAI's innovative AI solutions
+            Meet the AI and machine learning experts, engineers, and product builders behind Hubble AI's intelligent solutions
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={member.name}

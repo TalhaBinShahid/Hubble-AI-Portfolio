@@ -62,7 +62,7 @@ export default function Process() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our proven process ensures delivery of high-quality AI solutions on time and within budget
+            Our proven process takes you from idea to production, ensuring high-quality AI and ML solutions shipped on time and ready to scale.
           </p>
         </motion.div>
 

@@ -46,7 +46,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">About RyzenAI</span>
+            <span className="gradient-text">About Hubble AI</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto mb-8"></div>
         </motion.div>
@@ -58,15 +58,16 @@ export default function About() {
           className="max-w-4xl mx-auto mb-20 px-6"
         >
           <p className="text-xl text-gray-300 leading-relaxed text-center mb-8">
-            RyzenAI is a professional AI and product development company focused on delivering
-            intelligent, scalable, and impactful solutions that empower businesses and innovators.
+            Hubble AI is a professional AI and product development company focused on delivering
+            intelligent, scalable, and high-impact solutions that empower businesses, startups, and innovators.
           </p>
           <p className="text-lg text-gray-400 leading-relaxed text-center">
             Our mission is to transform ideas into AI-driven products and systems that solve
-            real-world problems, streamline workflows, and enable smarter decision-making. RyzenAI
-            combines deep AI expertise with full-stack product development experience, allowing us
-            to handle projects ranging from <span className="text-cyan-400 font-semibold">small AI automations</span> to{' '}
-            <span className="text-purple-400 font-semibold">full-scale enterprise applications</span>.
+            real-world problems, streamline workflows, and enable smarter decision-making. Hubble AI
+            combines deep expertise in machine learning engineering, agentic AI, and full-stack
+            development, allowing us to handle projects ranging from{' '}
+            <span className="text-cyan-400 font-semibold">small AI automations</span> to{' '}
+            <span className="text-purple-400 font-semibold">full-scale enterprise platforms</span>.
           </p>
         </motion.div>
 
