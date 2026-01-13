@@ -9,10 +9,12 @@ import Testimonials from './components/Testimonials'
 import Stats from './components/Stats'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import CustomCursor from './components/CustomCursor'
 
 function App() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <CustomCursor />
       <Navbar />
       <Hero />
       <About />

@@ -40,10 +40,11 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          Hubble AI is a professional AI and product development partner, delivering{' '}
-          <span className="text-cyan-400 font-semibold">targeted automations</span> and{' '}
-          <span className="text-purple-400 font-semibold">enterprise-scale AI products</span>.
-          From machine learning systems and MLOps to intelligent agents, we turn ideas into deployed systems.
+          At Hubble AI, we design and ship end-to-end{' '}
+          <span className="text-cyan-400 font-semibold">AI products, intelligent agents, automations,</span>{' '}
+          and{' '}
+          <span className="text-purple-400 font-semibold">modern web platforms</span>.
+          {/* In one team, you get strategy, engineering, and deployment to production. */}
         </motion.p>
 
         <motion.div
