@@ -1,6 +1,6 @@
-# RyzenAI - Professional AI & Product Development Agency Website
+# Hubble AI - Professional AI & Product Development Agency Website
 
-A premium, modern, and fully responsive website for RyzenAI, an AI and product development company. Built with React, TailwindCSS, and Framer Motion.
+A premium, modern, and fully responsive website for Hubble AI, an AI-driven product development and solutions company. Built with React, TailwindCSS, and Framer Motion.
 
 ## 🚀 Features
 
@@ -177,7 +177,7 @@ const transporter = nodemailer.createTransport({
 // In the contact endpoint
 await transporter.sendMail({
   from: email,
-  to: 'hello@ryzenai.com',
+  to: 'hello@hubbleai.dev',
   subject: `New Contact Form: ${name}`,
   text: message,
 });
@@ -219,9 +219,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📞 Support
 
-For questions or support, contact us at hello@ryzenai.com
+For questions or support, contact us at hello@hubbleai.dev
 
 ---
 
-Built with ❤️ by RyzenAI Team
+Built with ❤️ by Hubble AI Team
 
