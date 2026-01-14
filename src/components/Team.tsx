@@ -12,7 +12,7 @@ export default function Team() {
       name: 'Umar Farooq',
       role: 'Full Stack AI Engineer',
       bio: 'AI and full-stack engineer focused on building production-ready intelligent systems and scalable platforms.',
-      image: '/team/umar.jpeg',
+      image: '/Hubble-AI-Portfolio/team/umar.jpeg',
       social: {
         linkedin: '#',
         github: '#',
@@ -23,7 +23,7 @@ export default function Team() {
       name: 'Talha Bin Shahid',
       role: 'AI Automations Engineer',
       bio: 'Automation and agentic AI engineer building end-to-end workflows, integrations, and internal tools.',
-      image: '/team/talha.png',
+      image: '/Hubble-AI-Portfolio/team/talha.png',
       social: {
         linkedin: '#',
         github: '#',
@@ -34,7 +34,7 @@ export default function Team() {
       name: 'Mahnoor Sadaqat',
       role: 'Full Stack Developer',
       bio: 'Full-stack developer crafting modern, responsive interfaces for data-heavy and AI-powered products.',
-      image: '/team/mahnoor.png',
+      image: '/Hubble-AI-Portfolio/team/mahnoor.png',
       social: {
         linkedin: '#',
         github: '#',

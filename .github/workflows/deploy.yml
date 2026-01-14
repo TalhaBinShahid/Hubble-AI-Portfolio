@@ -33,6 +33,9 @@ jobs:
           rm -rf docs
           mv dist docs
 
+      - name: Copy CNAME
+        run: cp CNAME docs/CNAME
+
       - name: Commit docs folder
         run: |
           git config user.name "github-actions[bot]"
