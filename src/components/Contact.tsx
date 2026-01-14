@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 export default function Contact() {
   const ref = useRef(null)
@@ -29,22 +30,33 @@ export default function Contact() {
     setStatus('loading')
     setErrorMessage('')
 
-    try {
-      const response = await fetch('http://localhost:3001/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-      if (response.ok) {
-        setStatus('success')
-        setFormData({ name: '', email: '', company: '', message: '' })
-        setTimeout(() => setStatus('idle'), 5000)
-      } else {
-        throw new Error('Failed to send message')
-      }
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error')
+      setErrorMessage('Email service is not configured. Please add EmailJS keys to your environment.')
+      setTimeout(() => setStatus('idle'), 5000)
+      return
+    }
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+        },
+        publicKey
+      )
+
+      setStatus('success')
+      setFormData({ name: '', email: '', company: '', message: '' })
+      setTimeout(() => setStatus('idle'), 5000)
     } catch (error) {
       setStatus('error')
       setErrorMessage('Failed to send message. Please try again or contact us directly.')
@@ -56,19 +68,19 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'hello@hubbleai.dev',
-      link: 'mailto:hello@hubbleai.dev',
+      value: 'hubbleaitech@gmail.com',
+      link: 'mailto:hubbleaitech@gmail.com',
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
+      value: '+92 335 5022002',
+      link: 'tel:+923355022002',
     },
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Islamabad, Pakistan',
       link: '#',
     },
   ]
@@ -176,7 +188,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                  Company Name
+                  Company Name (Optional)
                 </label>
                 <input
                   type="text"
