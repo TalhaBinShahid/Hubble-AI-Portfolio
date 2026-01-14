@@ -14,55 +14,34 @@ export default function Portfolio() {
       category: 'AI Recruitment Platform',
       description: 'AI-powered recruitment automation platform managing candidate applications, resume scoring, and automated interview workflows.',
       longDescription: 'HRXpert revolutionizes the hiring process with intelligent automation. The platform uses advanced NLP for resume parsing and scoring, automated scheduling systems, and AI-driven interview workflows that reduce time-to-hire by 60%.',
-      image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop',
-      tags: ['NLP', 'Automation', 'NestJS', 'React'],
+      image: '/portfolio/hrxpert.png',
+      tags: ['Automation', 'NestJS', 'Next.js', 'FastAPI', 'MongoDB', 'AWS S3', 'OpenAI APIs', 'OpenAI Real-time APIs'],
       color: 'from-cyan-500 to-blue-500',
+      github: "https://github.com/HRXpert",
+      link: ""
     },
     {
-      title: 'VizdomAI',
+      title: 'VizdomAI – Autonomous AI Video Generation Platform',
+      category: 'AI Video Generation Platform',
+      description: 'End-to-end AI platform for automated video generation, processing, and intelligent content delivery.',
+      longDescription: 'VizdomAI is an autonomous AI-driven video generation platform that orchestrates multiple intelligent agents to create, process, and deliver high-quality videos at scale. It handles script understanding, video synthesis, thumbnail generation, adaptive HLS streaming, embeddings, and metadata management, all powered by a distributed microservices architecture with real-time monitoring and analytics.',
+      image: '/portfolio/vizdomai.png',
+      tags: ['Generative AI', 'LangGraph', 'FastAPI', 'Next.js', 'AWS S3', 'Embeddings', 'Gemini API'],
+      color: 'from-indigo-500 to-cyan-500',
+      github: 'https://github.com/Vizdom-AI',
+      link: ''
+    },
+    {
+      title: 'Automated timber defect detection using Hybrid YOLO model',
       category: 'Computer Vision Solution',
       description: 'Industrial computer vision solution for defect detection and analysis with real-time processing capabilities.',
       longDescription: 'VizdomAI brings advanced computer vision to manufacturing. Using custom-trained models, it detects defects with 99.2% accuracy in real-time, providing instant feedback and detailed analytics dashboards for quality control.',
-      image: 'https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&h=600&fit=crop',
-      tags: ['Computer Vision', 'PyTorch', 'FastAPI', 'Real-time'],
+      image: '/portfolio/timberdefect.png',
+      tags: ['Computer Vision', 'PyTorch', 'FastAPI', 'YOLO', 'Machine Learning'],
       color: 'from-purple-500 to-pink-500',
-    },
-    {
-      title: 'AI Voice Assistant',
-      category: 'Intelligent Agent',
-      description: 'Multi-lingual AI voice assistant for customer support with natural conversation capabilities and context awareness.',
-      longDescription: 'An enterprise-grade voice assistant that handles customer queries across 15 languages. Features include sentiment analysis, context retention, and seamless handoff to human agents when needed.',
-      image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?w=800&h=600&fit=crop',
-      tags: ['NLP', 'Voice AI', 'Multi-lingual', 'Agent'],
-      color: 'from-green-500 to-teal-500',
-    },
-    {
-      title: 'Analytics Dashboard',
-      category: 'Real-time Platform',
-      description: 'Real-time analytics and visualization platform for business intelligence with AI-powered insights.',
-      longDescription: 'A comprehensive analytics platform that processes millions of events per day, providing real-time insights with predictive analytics and automated reporting.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop',
-      tags: ['Analytics', 'Real-time', 'React', 'MongoDB'],
-      color: 'from-orange-500 to-red-500',
-    },
-    {
-      title: 'Document AI',
-      category: 'Document Processing',
-      description: 'Intelligent document processing system with OCR, classification, and automated data extraction.',
-      longDescription: 'Transform unstructured documents into structured data. Handles invoices, contracts, forms with 95% accuracy, reducing manual processing time by 80%.',
-      image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop',
-      tags: ['OCR', 'NLP', 'Automation', 'Enterprise'],
-      color: 'from-indigo-500 to-purple-500',
-    },
-    {
-      title: 'Workflow Automation',
-      category: 'Business Automation',
-      description: 'No-code workflow automation platform enabling businesses to build custom AI-powered workflows.',
-      longDescription: 'Empower teams to create custom automation workflows without coding. Features drag-and-drop interface, AI integrations, and enterprise-grade security.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
-      tags: ['No-code', 'Automation', 'Workflows', 'SaaS'],
-      color: 'from-pink-500 to-rose-500',
-    },
+      github: "github.com/Vizdom-AI",
+      link: ""
+    }
   ]
 
   return (
@@ -99,8 +78,8 @@ export default function Portfolio() {
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10"></div>
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -159,8 +138,8 @@ export default function Portfolio() {
             </button>
 
             <div className="relative h-64">
-              <img 
-                src={projects[selectedProject].image} 
+              <img
+                src={projects[selectedProject].image}
                 alt={projects[selectedProject].title}
                 className="w-full h-full object-cover"
               />
