@@ -31,9 +31,9 @@ export default function Services() {
     },
     {
       icon: Database,
-      title: 'Real-Time Intelligent Systems',
-      description: 'AI systems processing data and interacting in real-time. Live AI interviews, analytics dashboards, automation platforms.',
-      features: ['Real-time Processing', 'Live Analytics', 'Human-like Interactions'],
+      title: 'Data Scraping, Analysis & Insights',
+      description: 'Web and data scraping, exploratory analysis, dashboards, and reports to help you understand and act on your data.',
+      features: ['Web & Data Scraping', 'Exploratory Data Analysis (EDA)', 'Analytics Dashboards & Reporting'],
       color: 'from-orange-400 to-red-500',
     },
     {

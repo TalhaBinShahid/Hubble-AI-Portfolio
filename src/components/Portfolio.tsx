@@ -10,7 +10,7 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: 'HRXpert',
+      title: 'HRXpert - Automating Talent Acquisition using Artificial Intelligence',
       category: 'AI Recruitment Platform',
       description: 'AI-powered recruitment automation platform managing candidate applications, resume scoring, and automated interview workflows.',
       longDescription: 'HRXpert revolutionizes the hiring process with intelligent automation. The platform uses advanced NLP for resume parsing and scoring, automated scheduling systems, and AI-driven interview workflows that reduce time-to-hire by 60%.',
@@ -39,10 +39,34 @@ export default function Portfolio() {
       image: '/portfolio/timberdefect.webp',
       tags: ['Computer Vision', 'PyTorch', 'FastAPI', 'YOLO', 'Machine Learning'],
       color: 'from-purple-500 to-pink-500',
-      github: "github.com/Vizdom-AI",
-      link: ""
-    }
+      github: "https://github.com/Umar-Farooq-2112/ultralytics-custom-SPPF-transformer-and-CBAM-based-timber-defects-detection.git",
+      link: "https://github.com/Umar-Farooq-2112/ultralytics-custom-SPPF-transformer-and-CBAM-based-timber-defects-detection.git"
+    },
+    {
+      title: 'LeafLens – Plant Healths Monitoring and Guidance Platform',
+      category: 'AI Agriculture & Plant Health',
+      description: 'AI-powered plant health monitoring platform that analyzes leaf images to detect diseases and recommend treatments.',
+      longDescription: 'LeafLens is an intelligent plant health monitoring platform that combines computer vision and generative AI to identify plant diseases from leaf images and provide actionable care guidance. It processes images in real time, classifies potential issues, explains the diagnosis in natural language, and suggests treatment and prevention steps so farmers and hobbyists can maintain crop health more effectively.',
+      image: '/portfolio/leaflens.webp',
+      tags: ['Computer Vision', 'Python', 'Generative AI', 'Neural Networks', 'TensorFlow', 'FastAPI', 'Next.js', 'NLP', 'Gemini API'],
+      color: 'from-indigo-500 to-cyan-500',
+      github: 'https://github.com/TalhaBinShahid/LeafLens.git',
+      link: ''
+    },
+    {
+      title: 'Dysarthric Speech Reconstruction Model',
+      category: 'AI Speech Reconstruction',
+      description: 'Deep learning model that reconstructs clearer, more intelligible speech from dysarthric audio recordings.',
+      longDescription: 'This project focuses on accessibility by reconstructing intelligible speech from dysarthric or highly impaired audio. Using a GAN-based architecture and neural speech processing techniques, the model learns to map distorted speech patterns to a cleaner acoustic representation while preserving speaker identity, helping improve communication for patients with motor speech disorders.',
+      image: '/portfolio/speechreconstruction.webp',
+      tags: ['Python', 'GANs', 'Speech Processing', 'Neural Networks', 'Deep Learning'],
+      color: 'from-indigo-500 to-cyan-500',
+      github: 'https://github.com/TalhaBinShahid/Speech-Reconstruction-GAN-Model.git',
+      link: ''
+    },
   ]
+
+  const selected = selectedProject !== null ? projects[selectedProject] : null
 
   return (
     <section id="portfolio" ref={ref} className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -60,7 +84,7 @@ export default function Portfolio() {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Proven track record of delivering production-grade AI solutions across industries
+            A snapshot of the AI products, platforms, and experiments we've done so far
           </p>
         </motion.div>
 
@@ -115,7 +139,7 @@ export default function Portfolio() {
       </div>
 
       {/* Project Modal */}
-      {selectedProject !== null && (
+      {selected && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -139,20 +163,20 @@ export default function Portfolio() {
 
             <div className="relative h-64">
               <img
-                src={projects[selectedProject].image}
-                alt={projects[selectedProject].title}
+                src={selected.image}
+                alt={selected.title}
                 className="w-full h-full object-cover"
               />
-              <div className={`absolute inset-0 bg-gradient-to-br ${projects[selectedProject].color} opacity-30`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${selected.color} opacity-30`}></div>
             </div>
 
             <div className="p-8">
-              <div className="text-sm text-cyan-400 mb-2">{projects[selectedProject].category}</div>
-              <h3 className="text-3xl font-bold text-white mb-4">{projects[selectedProject].title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed text-lg">{projects[selectedProject].longDescription}</p>
+              <div className="text-sm text-cyan-400 mb-2">{selected.category}</div>
+              <h3 className="text-3xl font-bold text-white mb-4">{selected.title}</h3>
+              <p className="text-gray-300 mb-6 leading-relaxed text-lg">{selected.longDescription}</p>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {projects[selectedProject].tags.map((tag) => (
+                {selected.tags.map((tag) => (
                   <span
                     key={tag}
                     className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-300"
@@ -163,14 +187,28 @@ export default function Portfolio() {
               </div>
 
               <div className="flex gap-4">
-                <button className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all">
-                  <ExternalLink className="w-5 h-5" />
-                  View Project
-                </button>
-                <button className="flex items-center gap-2 px-6 py-3 border border-cyan-500/50 rounded-full font-semibold hover:bg-cyan-500/10 transition-all">
-                  <Github className="w-5 h-5" />
-                  Source Code
-                </button>
+                {selected.link && (
+                  <a
+                    href={selected.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
+                  >
+                    <ExternalLink className="w-5 h-5" />
+                    View Project
+                  </a>
+                )}
+                {selected.github && (
+                  <a
+                    href={selected.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 border border-cyan-500/50 rounded-full font-semibold hover:bg-cyan-500/10 transition-all"
+                  >
+                    <Github className="w-5 h-5" />
+                    Source Code
+                  </a>
+                )}
               </div>
             </div>
           </motion.div>

@@ -3,42 +3,34 @@ import { useInView } from 'framer-motion'
 import { useRef, useState, useEffect } from 'react'
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
+type Testimonial = {
+  name: string
+  company: string
+  content: string
+  image: string
+  rating: number
+  role?: string
+}
+
 export default function Testimonials() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const testimonials = [
+  const testimonials: Testimonial[] = [
     {
-      name: 'David Martinez',
-      role: 'CTO, TechVenture Inc',
-      company: 'Fortune 500 Technology Company',
-      content: 'Hubble AI transformed our recruitment process with HRXpert. We reduced time-to-hire by 60% and improved candidate quality significantly. Their team understood our needs perfectly and delivered beyond expectations.',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop',
+      name: 'Jordan Zietz',
+      company: 'Brackot Company',
+      // role: 'Founder, Brackot Company',
+      content: 'From understanding our requirements to deploying a reliable model, the process was smooth, transparent, and professional. The final result exceeded expectations and added clear value to our operations.',
+      image: 'https://www.upwork.com/profile-portraits/c1zJWGmy9XD_AyegTj2ysdZ0ECiWs7QqNSpC-DGf_ryF9QQiHA38wHENtMoZhqiSw1',
       rating: 5,
     },
     {
-      name: 'Lisa Thompson',
-      role: 'VP of Operations, ManufacturePro',
-      company: 'Industrial Manufacturing',
-      content: 'VizdomAI revolutionized our quality control process. The computer vision system catches defects with incredible accuracy. Hubble AI\'s expertise in AI and production deployment made the transition seamless.',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop',
-      rating: 5,
-    },
-    {
-      name: 'James Wilson',
-      role: 'Founder & CEO, StartupX',
-      company: 'AI Startup',
-      content: 'Working with Hubble AI was a game-changer for our startup. They took our idea and built a production-ready AI platform in record time. The quality of code and architecture is exceptional.',
-      image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop',
-      rating: 5,
-    },
-    {
-      name: 'Maria Garcia',
-      role: 'Director of Innovation, FinanceHub',
-      company: 'Financial Services',
-      content: 'Hubble AI delivered a sophisticated document processing system that handles thousands of documents daily with impressive accuracy. Their understanding of both AI and enterprise needs is outstanding.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop',
+      name: 'Mesut Yilmaz',
+      company: 'AI Navigator, Germany',
+      content: 'HubbleAI did a great job helping us to scrape relevant data for our AI Solution. They have good hands on data research and engineering.',
+      image: '',
       rating: 5,
     },
   ]
@@ -100,14 +92,22 @@ export default function Testimonials() {
                 </p>
 
                 <div className="flex items-center gap-4">
-                  <img 
-                    src={testimonials[currentIndex].image} 
+                  <img
+                    src={testimonials[currentIndex].image ?? '/avatar-fallback.svg'}
                     alt={testimonials[currentIndex].name}
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement
+                      if (!target.src.includes('avatar-fallback.svg')) {
+                        target.src = '/avatar-fallback.svg'
+                      }
+                    }}
                     className="w-16 h-16 rounded-full border-2 border-cyan-500/50"
                   />
                   <div>
                     <h4 className="text-white font-bold text-lg">{testimonials[currentIndex].name}</h4>
-                    <p className="text-cyan-400">{testimonials[currentIndex].role}</p>
+                    {testimonials[currentIndex].role && (
+                      <p className="text-cyan-400">{testimonials[currentIndex].role}</p>
+                    )}
                     <p className="text-gray-400 text-sm">{testimonials[currentIndex].company}</p>
                   </div>
                 </div>

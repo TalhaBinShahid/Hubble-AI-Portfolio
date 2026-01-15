@@ -10,28 +10,28 @@ export default function Stats() {
   const stats = [
     {
       icon: Briefcase,
-      value: 150,
+      value: 20,
       suffix: '+',
-      label: 'AI & ML Projects',
+      label: 'Products Delivered',
       color: 'from-cyan-400 to-blue-500',
     },
     {
       icon: Users,
-      value: 85,
+      value: 5,
       suffix: '+',
       label: 'Clients Served',
       color: 'from-purple-400 to-pink-500',
     },
     {
       icon: Rocket,
-      value: 200,
+      value: 10,
       suffix: '+',
       label: 'AI Workflows Automated',
       color: 'from-green-400 to-teal-500',
     },
     {
       icon: TrendingUp,
-      value: 98,
+      value: 100,
       suffix: '%',
       label: 'Client Satisfaction',
       color: 'from-orange-400 to-red-500',

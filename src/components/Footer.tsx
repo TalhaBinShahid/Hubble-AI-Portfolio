@@ -5,10 +5,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: '#contact', label: 'Email' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/hubbleai-tech/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:hubbleaitech@gmail.com', label: 'Email' },
   ]
 
   const footerLinks = [

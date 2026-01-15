@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Linkedin, Github, Twitter } from 'lucide-react'
+import { Linkedin, Github, Globe2 } from 'lucide-react'
 
 export default function Team() {
   const ref = useRef(null)
@@ -14,9 +14,9 @@ export default function Team() {
       bio: 'AI and full-stack engineer focused on building production-ready intelligent systems and scalable platforms.',
       image: '/team/umar.webp',
       social: {
-        linkedin: '#',
-        github: '#',
-        twitter: '#',
+        linkedin: 'www.linkedin.com/in/umarrfarooq',
+        github: 'https://github.com/Umar-Farooq-2112',
+        portfolio: 'https://umarfarooq.tech',
       },
     },
     {
@@ -25,9 +25,9 @@ export default function Team() {
       bio: 'Automation and agentic AI engineer building end-to-end workflows, integrations, and internal tools.',
       image: '/team/talha.webp',
       social: {
-        linkedin: '#',
-        github: '#',
-        twitter: '#',
+        linkedin: 'https://www.linkedin.com/in/raja-talha/',
+        github: 'https://github.com/TalhaBinShahid',
+        portfolio: '#',
       },
     },
     {
@@ -36,9 +36,9 @@ export default function Team() {
       bio: 'Full-stack developer crafting modern, responsive interfaces for data-heavy and AI-powered products.',
       image: '/team/mahnoor.webp',
       social: {
-        linkedin: '#',
-        github: '#',
-        twitter: '#',
+        linkedin: 'https://www.linkedin.com/in/mahnoor-sadaqat/',
+        github: 'https://github.com/MahnoorSadaqat',
+        portfolio: '#',
       },
     },
   ]
@@ -101,21 +101,25 @@ export default function Team() {
                     >
                       <Github className="w-5 h-5 text-cyan-400" />
                     </motion.a>
-                    <motion.a
-                      href={member.social.twitter}
-                      whileHover={{ scale: 1.2 }}
-                      whileTap={{ scale: 0.9 }}
-                      className="p-3 bg-cyan-500/20 rounded-full hover:bg-cyan-500/30 transition-colors"
-                    >
-                      <Twitter className="w-5 h-5 text-cyan-400" />
-                    </motion.a>
+                    {member.social.portfolio && member.social.portfolio !== '#' && (
+                      <motion.a
+                        href={member.social.portfolio}
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.9 }}
+                        className="p-3 bg-cyan-500/20 rounded-full hover:bg-cyan-500/30 transition-colors"
+                      >
+                        <Globe2 className="w-5 h-5 text-cyan-400" />
+                      </motion.a>
+                    )}
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="p-6 text-center">
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
+                  {member.role && (
+                    <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
+                  )}
                   <p className="text-gray-400 text-sm leading-relaxed">{member.bio}</p>
                 </div>
 
