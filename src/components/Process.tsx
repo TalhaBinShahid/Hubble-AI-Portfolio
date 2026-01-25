@@ -1,11 +1,10 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { MessageSquare, Lightbulb, Code2, Rocket, BarChart3, Wrench } from 'lucide-react'
 
 export default function Process() {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { margin: '-100px' })
 
   const steps = [
     {
@@ -79,9 +78,10 @@ export default function Process() {
               return (
                 <motion.div
                   key={step.title}
-                  initial={{ opacity: 0, x: isEven ? -50 : 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  initial={{ opacity: 0, x: isEven ? -120 : 120 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ amount: 0.5, once: false }}
+                  transition={{ duration: 0.6 }}
                   className={`flex flex-col lg:flex-row items-center gap-8 ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
                 >
                   {/* Content */}
