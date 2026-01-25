@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { Bot, Code, Brain, Rocket, Database, Workflow } from 'lucide-react'
+import { Bot, Code, Brain, Rocket, Database, Workflow, Smartphone, ServerCog } from 'lucide-react'
 
 export default function Services() {
   const ref = useRef(null)
@@ -49,6 +49,20 @@ export default function Services() {
       description: 'Strategic guidance on AI and ML adoption, data strategy, architecture, and infrastructure decisions.',
       features: ['AI & ML Strategy', 'Feasibility Analysis', 'Technical Roadmaps'],
       color: 'from-pink-400 to-rose-500',
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Application Development',
+      description: 'Design and develop high-performance mobile applications for iOS and Android with seamless UX, offline support, and secure integrations.',
+      features: ['iOS & Android Apps', 'Flutter & Cross-Platform', 'API & Third-Party Integrations'],
+      color: 'from-emerald-400 to-cyan-500',
+    },
+    {
+      icon: ServerCog,
+      title: 'DevOps, Cloud & Infrastructure',
+      description: 'Automate delivery pipelines, improve reliability, and scale confidently with modern DevOps practices and cloud-native infrastructure.',
+      features: ['CI/CD Pipelines & Automation', 'Cloud Infrastructure (AWS, Azure, GCP)', 'Monitoring, Logging & Cost Optimization'],
+      color: 'from-slate-400 to-cyan-500',
     },
   ]
 
