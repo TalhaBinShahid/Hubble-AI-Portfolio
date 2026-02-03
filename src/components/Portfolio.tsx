@@ -131,7 +131,7 @@ export default function Portfolio() {
 
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white font-semibold">View Details</span>
+                {/* <span className="text-white font-semibold">View Details</span> */}
               </div>
             </motion.div>
           ))}
